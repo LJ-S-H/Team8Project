@@ -1,0 +1,49 @@
+package Pack1;
+
+/**
+ * Simulates a router table that updates 
+ * @author Lovejit Hari
+ * @author V
+ * @author K
+ *
+ */
+public class RouterTableSim {
+
+	//Entry array of size 10
+	private Entry[] myEntryArr = new Entry[10];
+	
+//	private int mySeqNum;
+//	
+//	private int myTime;
+//	
+//	private int myDestAddr;
+//	
+//	private int myCost;
+//	
+//	private int myPortNum;
+	
+	
+	public static void main(String[] args) {
+
+		
+
+	}
+	
+	/**
+	 * Initializes all the entries used in our router table
+	 */
+	private static void initEntries() {
+		
+		Entry ent1 = new Entry(1,1,1,1,1);
+		Entry ent2 = new Entry(2,2,2,2,2);
+		Entry ent3 = new Entry(3,3,3,3,3);
+		Entry ent4 = new Entry(4,4,4,4,4);
+		Entry ent5 = new Entry(5,5,5,5,5);
+		Entry ent6 = new Entry(6,6,6,6,6);
+		Entry ent7 = new Entry(7,7,7,7,7);
+		Entry ent8 = new Entry(8,8,8,8,8);
+		Entry ent9 = new Entry(9,9,9,9,9);
+		Entry ent10 = new Entry(10,10,10,10,10);
+	}
+
+}

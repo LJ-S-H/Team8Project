@@ -1,0 +1,73 @@
+package Pack1;
+
+import java.util.Scanner;
+
+/**
+ * Simulates a router table that updates 
+ * @author Lovejit Hari
+ * @author V
+ * @author K
+ *
+ */
+public class RouterTableSim {
+
+	//Entry array of size 10
+	private static Entry[] myEntryArr = new Entry[10];
+	
+	
+	public static void main(String[] args) {
+
+		initEntries();
+		System.out.println("Port\tIP\t\tHops\tTime");
+		for (int i = 0; i < 6; i++) {
+			
+			System.out.println(myEntryArr[i].getMyPortNum() + "\t" + myEntryArr[i].getMyIp() + "\t" +
+					myEntryArr[i].getMyHops() + "\t" + myEntryArr[i].getMyTime());
+			
+		}
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Update? Y/N");
+		
+		String potato = scan.nextLine();
+		
+		System.out.println("\n");
+		myEntryArr[6] = new Entry("S0","140.0.0.0",4);
+		myEntryArr[7] = new Entry("S1","140.0.0.0",2);
+		
+		System.out.println("Port\tIP\t\tHops\tTime");
+		for (int i = 0; i < 8; i++) {
+			System.out.println(myEntryArr[i].getMyPortNum() + "\t" + myEntryArr[i].getMyIp() + "\t" +
+					myEntryArr[i].getMyHops() + "\t" + myEntryArr[i].getMyTime());
+		}
+	}
+	
+	/**
+	 * Initializes all the entries used in our router table
+	 */
+	private static void initEntries() {
+		
+		for (int i = 0; i < 3; i++) {
+			myEntryArr[i] = new Entry("S0", (137+i) + ".0.0.0", i+1);
+		}
+		
+		for (int i = 3; i < 6; i++) {
+			myEntryArr[i] = new Entry("S1", (139-i+3) + ".0.0.0", i-2);
+		}
+		
+	}
+	
+	private static void initEntryRoutes() {
+		
+		System.out.println("A->B");
+		System.out.println("A->B->C");
+		System.out.println("A->B->C->D");
+		System.out.println("A->B");
+		System.out.println("A->B");
+		System.out.println("A->B");
+		System.out.println("A->B");
+		
+	}
+
+}

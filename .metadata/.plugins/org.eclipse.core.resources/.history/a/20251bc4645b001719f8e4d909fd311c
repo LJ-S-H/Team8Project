@@ -1,0 +1,53 @@
+package Pack1;
+
+public class Router {
+
+	private static Router s0, s1, s2;
+	
+	private static String myIP;
+	
+	private static Entry[] myRoutingTable = new Entry[100000];
+	
+	private static boolean isUp = true;
+
+	public static Router getS0() {
+		return s0;
+	}
+
+	public static void setS0(Router s0) {
+		Router.s0 = s0;
+	}
+
+	public static Router getS1() {
+		return s1;
+	}
+
+	public static void setS1(Router s1) {
+		Router.s1 = s1;
+	}
+
+	public static Router getS2() {
+		return s2;
+	}
+
+	public static void setS2(Router s2) {
+		Router.s2 = s2;
+	}
+
+	public static String getMyIP() {
+		return myIP;
+	}
+
+	public static void setMyIP(String myIP) {
+		Router.myIP = myIP;
+	}
+
+	public static boolean isUp() {
+		return isUp;
+	}
+
+	public static void setUp(boolean isUp) {
+		Router.isUp = isUp;
+	}
+	
+}

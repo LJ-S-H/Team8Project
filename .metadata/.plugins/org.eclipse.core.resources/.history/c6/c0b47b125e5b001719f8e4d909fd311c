@@ -1,0 +1,28 @@
+package Pack1;
+
+import java.sql.Time;
+
+/**
+ * Object that holds the information of an entry within a routing table
+ * 
+ * @author Lovejit Hari
+ * @version 1.0
+ */
+public class Entry {
+	
+	private Time myTime;
+	
+	private String myIp;
+	
+	private int myHops;
+	
+	private String myPortNum;
+
+	public Entry(String thePortNum, String theIp, int theHops, Time theTime) {
+		super();
+		this.myTime = theTime;
+		this.myIp = theIp;
+		this.myHops = theHops;
+		this.myPortNum = thePortNum;
+	}
+}

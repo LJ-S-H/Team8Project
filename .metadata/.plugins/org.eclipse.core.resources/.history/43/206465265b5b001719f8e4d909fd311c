@@ -1,0 +1,14 @@
+package Pack1;
+
+public class RouterTableSim {
+
+	private Entry[] entryArr = new Entry[10];
+	
+	
+	public static void main(String[] args) {
+
+		
+
+	}
+
+}
