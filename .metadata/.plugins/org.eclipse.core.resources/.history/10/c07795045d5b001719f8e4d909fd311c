@@ -1,0 +1,57 @@
+package Pack1;
+
+/**
+ * Object that holds the information of an entry within a routing table
+ * 
+ * @author Lovejit Hari
+ * @version 1.0
+ */
+public class Entry {
+	
+	private int myTime;
+	
+	private int myDestAddr;
+	
+	private int myHops;
+	
+	private int myPortNum;
+
+	public Entry(int theTime, int theDestAddr, int theHops, int thePortNum) {
+		super();
+		this.myTime = theTime;
+		this.myDestAddr = theDestAddr;
+		this.myHops = theHops;
+		this.myPortNum = thePortNum;
+	}
+	public int getMyTime() {
+		return myTime;
+	}
+
+	public void setMyTime(int myTime) {
+		this.myTime = myTime;
+	}
+
+	public int getMyDestAddr() {
+		return myDestAddr;
+	}
+
+	public void setMyDestAddr(int myDestAddr) {
+		this.myDestAddr = myDestAddr;
+	}
+
+	public int getMyCost() {
+		return myHops;
+	}
+
+	public void setMyCost(int myCost) {
+		this.myHops = myCost;
+	}
+
+	public int getMyPortNum() {
+		return myPortNum;
+	}
+
+	public void setMyPortNum(int myPortNum) {
+		this.myPortNum = myPortNum;
+	}
+}

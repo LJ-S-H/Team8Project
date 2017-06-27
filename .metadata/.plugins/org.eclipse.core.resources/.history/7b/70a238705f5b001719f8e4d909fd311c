@@ -1,0 +1,51 @@
+package Pack1;
+
+/**
+ * Simulates a router table that updates 
+ * @author Lovejit Hari
+ * @author V
+ * @author K
+ *
+ */
+public class RouterTableSim {
+
+	//Entry array of size 10
+	private static Entry[] myEntryArr = new Entry[10];
+	
+//	private int mySeqNum;
+//	
+//	private int myTime;
+//	
+//	private int myDestAddr;
+//	
+//	private int myCost;
+//	
+//	private int myPortNum;
+	
+	
+	public static void main(String[] args) {
+
+		initEntries();
+		System.out.println("Port\tIP\tHops\tTime");
+		for (int i = 0; i < 6; i++) {
+			System.out.println(myEntryArr[i].getMyPortNum() + myEntryArr[i].getMyIp() +
+					myEntryArr[i].getMyHops() + myEntryArr[i].getMyTime());
+		}
+
+	}
+	
+	/**
+	 * Initializes all the entries used in our router table
+	 */
+	private static void initEntries() {
+		
+		Entry ent1 = new Entry("S0","137.0.0.0",1);
+		Entry ent2 = new Entry("S0","138.0.0.0",2);
+		Entry ent3 = new Entry("S0","139.0.0.0",3);
+		Entry ent4 = new Entry("S1","139.0.0.0",1);
+		Entry ent5 = new Entry("S1","138.0.0.0",2);
+		Entry ent6 = new Entry("S1","137.0.0.0",3);
+		
+	}
+
+}

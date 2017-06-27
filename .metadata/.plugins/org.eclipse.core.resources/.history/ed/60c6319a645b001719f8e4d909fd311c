@@ -1,0 +1,7 @@
+package Pack1;
+
+public class Router {
+
+	private Router s0, s1, s2;
+	
+}

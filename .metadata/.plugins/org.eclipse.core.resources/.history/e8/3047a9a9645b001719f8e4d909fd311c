@@ -1,0 +1,11 @@
+package Pack1;
+
+public class Router {
+
+	private static Router s0, s1, s2;
+	
+	private static String myIP;
+	
+	private static Entry[] myRoutingTable = new Entry[100000];
+	
+}
