@@ -50,7 +50,7 @@ public class RouterTableSim {
 		
 		System.out.println("Simulating IP 138.0.0.0 going offline");
 		
-		System.out.println("Update: Press any key");
+		System.out.println("Update? Y/N");
 		
 		potato = scan.nextLine();
 		
@@ -67,7 +67,7 @@ public class RouterTableSim {
 		
 		System.out.println("Simulating adding a node");
 		
-		System.out.println("Update: Press any key");
+		System.out.println("Update? Y/N");
 		
 		potato = scan.nextLine();
 		
