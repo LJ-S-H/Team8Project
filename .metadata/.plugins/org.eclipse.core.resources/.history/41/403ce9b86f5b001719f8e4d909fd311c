@@ -18,16 +18,9 @@ public class Entry {
 	
 	private String myPortNum;
 
-	/**
-	 * Entry is an object that contains a port number, ip address, and the number
-	 * of hops it takes to get from one node to another.
-	 * @param thePortNum port number associated with this entry
-	 * @param theIp the ip address of this entry
-	 * @param theHops number of hops it takes to get from this entry to another entry
-	 */
 	public Entry(String thePortNum, String theIp, int theHops) {
 		super();
-		this.myTime = System.currentTimeMillis(); //time of creation 
+		this.myTime = System.currentTimeMillis();
 		this.myIp = theIp;
 		this.myHops = theHops;
 		this.myPortNum = thePortNum;
