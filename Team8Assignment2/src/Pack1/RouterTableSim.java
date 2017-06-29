@@ -6,7 +6,7 @@ import java.util.Scanner;
  * Simulates a router table that updates to show an addition of a node,
  * a removal of a node, and the reconnection to some node.
  * @author Lovejit Hari
- * @author V
+ * @author Vincent Povio
  * @author K
  *
  */
@@ -18,8 +18,9 @@ public class RouterTableSim {
 	
 	public static void main(String[] args) {
 
-		//pritns out the initial entries
+		//Initializes the table.
 		initEntries();
+		//prints out the initial entries
 		System.out.println("Port\tIP\t\tHops\tTime");
 		for (int i = 0; i < 6; i++) {
 			
@@ -36,6 +37,7 @@ public class RouterTableSim {
 		String potato = scan.nextLine();
 		
 		System.out.println("\n");
+		//Adds the routes for a new router being connected to 139.0.0.0
 		myEntryArr[6] = new Entry("S0","140.0.0.0",4);
 		myEntryArr[7] = new Entry("S1","140.0.0.0",2);
 		
@@ -54,8 +56,14 @@ public class RouterTableSim {
 		
 		potato = scan.nextLine();
 		
+		//Changes the array to reflect how removing the node would adjust the table.
 		myEntryArr[1] = myEntryArr[3];
 		myEntryArr[2] = myEntryArr[7];
+		myEntryArr[3] = null;
+		myEntryArr[4] = null;
+		myEntryArr[5] = null;
+		myEntryArr[6] = null;
+		myEntryArr[7] = null;
 		
 		//prints out updated router table after removing a node
 		System.out.println("Port\tIP\t\tHops\tTime");
@@ -71,6 +79,7 @@ public class RouterTableSim {
 		
 		potato = scan.nextLine();
 		
+		//Simulates adding the 138.0.0.0 node back into the network.
 		myEntryArr[3] = new Entry("S0", "138.0.0.0", 2);
 		myEntryArr[4] = new Entry("S1", "138.0.0.0", 2);
 		myEntryArr[5] = new Entry("S0", "139.0.0.0", 3);
